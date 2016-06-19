@@ -1,22 +1,17 @@
 # KSwe SoSe 2016 - Aufgabe 8
 
-Entwicklung eine JSON-Encodings für ein Wetter-Objekt.
-
-Forke wie gewohnt das Projekt in deinen GitHub-Account. Falls schon vorhanden,
-lösche den Fork oder aktualisiere deinen Fork mit einem Pull Request.
+Debugging und Continuous Integration.
 
 ## Vorgehensweise
 
-Es soll ein JSON-Encoder geschrieben werden, der ein Java-Objekt der Klasse
-`Weather` in ein JSON-Objekt wandelt. Hierzu soll explizit Test-Driven
-Development angewandt werden.
+Das vorliegende Programm enthält eine Klassen `JsonWeatherEncoder`. Diese
+Klasse wird mit dem entsprechenden Test `JsonWeatherEncoderTest` auf Korrektheit
+geprüft. Allerdings scheint sich ein Fehler eingeschlichen zu haben.
 
-* Implementiere zunächst die Test-Klasse `JsonWeatherEncoderTest`
-* Implementiere dann die Logik der Klasse `JsonWeatherEncoder`
-* Schreibe `Assert.asserThat(...)`-Statements zur Verifikation der richtigen
-JSON-Struktur
+Nutze den Debugger deiner IDE, um Schritt für Schritt durch die Methode
+`public String encode(Weather obj)` zu navigieren.
 
-Das enkodierte Wetter-Objekt sollte due folgende Struktur aufweisen
+Das Ergebnis der Methode soll dem Folgenden JSON entsprechen:
 
 ```json
 {
@@ -28,18 +23,15 @@ Das enkodierte Wetter-Objekt sollte due folgende Struktur aufweisen
     "temperature": {
       "value": 22.3,
       "unit": "C"
-    },
-    "rain": {
-      "value": 2.3,
-      "unit": "mm/h"
-    },
-    "windSpeed": {
-      "value": 1.3,
-      "unit": "m/s"
     }
   }
 }
 ```
+
+## Interaktives Debugging
+
+* identifiziere den Fehler
+* führe Anpassungen durch, damit der Test erfolgreich ausgeführt wird
 
 ## Automatisches Testen
 
