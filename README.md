@@ -41,7 +41,7 @@ für Open-Source-Projekte. Es bietet die Möglichkeit, GitHub-Projekte
 automatisiert zu testen.
 
 Sobald ein GitHub-Repository die Datei
-[`travis.yml`](https://docs.travis-ci.com/user/getting-started/) enthält
+[`.travis.yml`](https://docs.travis-ci.com/user/getting-started/) enthält
 und ein entsprechender
 [Service Hook](https://www.objc.io/issues/6-build-tools/travis-ci/#link-travis-and-github)
 für das Repository eingerichtet ist, führt Travis automatisch das Kompilieren
