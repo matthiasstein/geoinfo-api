@@ -2,6 +2,8 @@
 package de.hsbochum.fbg.kswe.geoinfo.api;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -17,9 +19,12 @@ public class JsonWeatherEncoderTest {
         w.setRain(2.1f);
         w.setTemp(22.3f);
         w.setWindSpeed(1.3f);
-        JsonNode json = encoder.encode(w);
+        String json = encoder.encode(w);
         
         //validate the JSON
+        Assert.assertThat(json, CoreMatchers.containsString("phenomena"));
+        Assert.assertThat(json, CoreMatchers.containsString("22.3"));
+        Assert.assertThat(json, CoreMatchers.containsString("C"));
     }
     
 }
